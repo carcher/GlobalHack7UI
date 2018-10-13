@@ -12,13 +12,16 @@ angular.module('globalHack7App')
     $scope.userInfo = {
       firstName: "",
       lastName: "",
-      userName: "",
-      email: "",
+      username: "",
+      emailAddress: "",
+      phoneNumber: "000-000-0000",
+      gender: 0,
       password: "",
       passwordConfirmation: ""
     };
     $scope.register = function(){
-      console.log($scope.userInfo);
+      console.log($scope.userInfo)
+      dataservice.registerUser($scope.userInfo);
     };
     $scope.$watch('userInfo', function(nv){
       console.log(nv);

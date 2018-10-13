@@ -13,8 +13,8 @@ angular.module('globalHack7App')
       userName: "",
       password: ""
     };
-    $scope.logon = function(){
-      console.log($scope.userInfo);
+    $scope.logon = function(userInfo){
+      dataservice.registerUser(userInfo);
     };
     $scope.data = dataservice.getData();
     console.log($scope.data);
