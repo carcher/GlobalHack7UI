@@ -9,11 +9,13 @@
  */
 angular.module('globalHack7App')
   .controller('LoginCtrl',['$scope', 'DataService', function ($scope, dataservice) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.userInfo = {
+      userName: "",
+      password: ""
+    };
+    $scope.logon = function(){
+      console.log($scope.userInfo);
+    };
     $scope.data = dataservice.getData();
     console.log($scope.data);
 }]);
