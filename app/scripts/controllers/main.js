@@ -8,7 +8,7 @@
  * Controller of the globalHack7App
  */
 angular.module('globalHack7App')
-  .controller('MainCtrl',['$scope', 'DataService', function ($scope, dataservice) {
+  .controller('MainCtrl',['$scope', 'DataService', '$translate', function ($scope, dataservice, $translate) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,4 +16,9 @@ angular.module('globalHack7App')
     ];
     $scope.data = dataservice.getData();
     console.log($scope.data);
+
+    // Control language based on locale files
+    $scope.changeLanguage = function (key) {
+      $translate.use(key);
+    };
 }]);

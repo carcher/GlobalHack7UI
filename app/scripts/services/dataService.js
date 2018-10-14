@@ -18,9 +18,10 @@ angular.module('globalHack7App').service('DataService', ['$http', function ($htt
     $http({
       method: 'GET',
       //url: 'https://jsonplaceholder.typicode.com/todos/1',
+      //url: 'https://api.unbabel.com/tapi/v2/language_pair/',
       url: 'http://67.205.129.210/Users/2',
       headers: {
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmNoZXIxMjA0QGdtYWlsLmNvbSIsIlVzZXJJZCI6IjIiLCJleHAiOjE1Mzk0NTQzMTIsImlzcyI6Ikdsb2JhbGhhY2siLCJhdWQiOiJHbG9iYWxoYWNrIn0.rVstjBZEX7_3B5AUOfP4GRCLaWzL_kOCnPnmJyZ9Ez8"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmNoZXIxMjA0QGdtYWlsLmNvbSIsIlVzZXJJZCI6IjIiLCJleHAiOjE1Mzk0NTQzMTIsImlzcyI6Ikdsb2JhbGhhY2siLCJhdWQiOiJHbG9iYWxoYWNrIn0.rVstjBZEX7_3B5AUOfP4GRCLaWzL_kOCnPnmJyZ9Ez8"
       }
     })
       .then(function (data, status) {
@@ -29,8 +30,8 @@ angular.module('globalHack7App').service('DataService', ['$http', function ($htt
 
         return this.items;
       })
-      .catch(function (data, status) {
-        console.log("Error");
+      .catch(function (e) {
+        console.log(e);
       });
   };
 }]);
