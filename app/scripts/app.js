@@ -19,18 +19,10 @@ angular
     'ngTouch',
   ])
   .config(function ($routeProvider, $locationProvider, $translateProvider) {
-    // Local config
+    // Locale config
     $translateProvider.useStaticFilesLoader({
-      files: [{
-        prefix: '../locales/locale-en',
-        suffix: '.json'
-      }, {
-        prefix: '../locales/locale-es',
-        suffix: '.json'
-      }, {
-        prefix: '../locales/locales-de',
-        suffix: '.json'
-      }]
+      prefix: '../locales/locale-',
+      suffix: '.json'
     });
     $translateProvider.preferredLanguage('en');
 
@@ -47,9 +39,14 @@ angular
         controllerAs: 'login'
       })
       .when('/signup', {
-        templateUrl: 'views/signup.html',
-        controller: 'SignupCtrl',
-        controllerAs: 'signup'
+      templateUrl: 'views/signup.html',
+      controller: 'SignupCtrl',
+      controllerAs: 'signup'
+      })
+      .when('/dashboard', {
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl',
+        controllerAs: 'dashboard'
       });
 
     // Locations config

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="globalHack7App">
+  <body ng-app="globalHack7App" ng-controller="MainCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -42,7 +42,11 @@
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/contact">Contact</a></li>
-              <li class="pull-right"><a ng-href="#/login">Login</a></li>
+              <li class="pull-right"><a ng-href="#/dashboard">Dashboard</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+              <li ng-if="!currentUser.authenticated" class="pull-right"><a ng-href="#/login">Login</a></li>
+              <li ng-if="currentUser.authenticated" class="pull-right">{{'Welcome ' + currentUser.FirstName | translate}}</li>
             </ul>
           </div>
         </div>
@@ -52,6 +56,10 @@
     <div class="container">
       <div class="changeLang">
         <span>Change language</span>
+        <select ng-model="selectedLanguage">
+          <option value="">Select Language</option>
+          <option ng-repeat="language in languages" value="{{language.abbr}}">{{language.name}}</option>
+        </select>
       </div>
       <div ng-view=""></div>
     </div>
@@ -86,6 +94,9 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -94,6 +105,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/dashboard.js"></script>
         <script src="scripts/services/dataService.js"></script>
         <!-- endbuild -->
 </body>

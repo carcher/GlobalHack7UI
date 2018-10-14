@@ -4,7 +4,7 @@
  * @ngdoc function
  * @name globalHack7App.controller:LoginCtrl
  * @description
- * # MainCtrl
+ * # LoginCtrl
  * Controller of the globalHack7App
  */
 angular.module('globalHack7App')
@@ -13,9 +13,9 @@ angular.module('globalHack7App')
       userName: "",
       password: ""
     };
+
+    // Attempt to authenticate the user, pass back to login if failed
     $scope.logon = function(userInfo){
       dataservice.registerUser(userInfo);
     };
-    $scope.data = dataservice.getData();
-    console.log($scope.data);
 }]);

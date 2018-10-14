@@ -4,7 +4,7 @@
  * @ngdoc function
  * @name globalHack7App.controller:SignupCtrl
  * @description
- * # MainCtrl
+ * # SignupCtrl
  * Controller of the globalHack7App
  */
 angular.module('globalHack7App')
@@ -19,10 +19,14 @@ angular.module('globalHack7App')
       password: "",
       passwordConfirmation: ""
     };
+
+    // Call out to register this user
     $scope.register = function(){
       console.log($scope.userInfo)
       dataservice.registerUser($scope.userInfo);
     };
+
+    // Listen for changes to the userInfo
     $scope.$watch('userInfo', function(nv){
       console.log(nv);
     });
