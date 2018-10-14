@@ -36,7 +36,12 @@
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                  <input ng-model="userInfo.gender" type="number" name="gender" id="gender" class="form-control input-sm" placeholder="gender">
+                  <select class="form-control" ng-model="userInfo.gender">
+                    <option value="" selected="selected">Select Gender</option>
+                    <option value="1">Female</option>
+                    <option value="2">Male</option>
+                    <option value="3">Other</option>
+                  </select>
                 </div>
               </div>
             </div>

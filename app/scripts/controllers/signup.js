@@ -15,7 +15,7 @@ angular.module('globalHack7App')
       username: "",
       emailAddress: "",
       phoneNumber: "000-000-0000",
-      gender: 0,
+      gender: "",
       password: "",
       passwordConfirmation: ""
     };
