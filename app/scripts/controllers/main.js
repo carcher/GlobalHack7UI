@@ -21,7 +21,28 @@ angular.module('globalHack7App')
       {name:'Italian', abbr: 'it'},
       {name:'French', abbr: 'fr'},
       {name:'German', abbr: 'de'},
-    ]
+    ];
+
+    $scope.navigation = [
+      {name:'About', active: false, enabled: false},
+      {name:'Dashboard', active: true, enabled: true},
+      {name:'Contact', active: false, enabled: true},
+      {name:'Home', active: false, enabled: false},
+      {name:'Login', active: false, enabled: true},
+      {name:'Employment', active: false, enabled: false},
+      {name:'Community', active: false, enabled: false},
+      {name:'Resources', active: false, enabled: false},
+    ];
+
+    $scope.changeActiveNav = function(obj) {
+      obj.active = true;
+
+      _.forEach($scope.navigation, function(navItem) {
+        if(navItem.name !== obj.name) {
+          navItem.active = false;
+        }
+      })
+    }
 
     // Control language based on locale files
     $scope.changeLanguage = function (key) {

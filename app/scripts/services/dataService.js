@@ -8,12 +8,12 @@
  * Controller of the globalHack7App
  */
 angular.module('globalHack7App').service('DataService', ['$http', '$window', '$location', '$rootScope', function ($http, $window, $location, $rootScope) {
-  this.getData = function() {
+  var getData = function(userInfo) {
     $http({
       method: 'GET',
-      url: 'http://67.205.159.40/',
+      url: 'http://67.205.159.40/Users/' + userInfo.id,
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmNoZXIxMjA0QGdtYWlsLmNvbSIsIlVzZXJJZCI6IjIiLCJleHAiOjE1Mzk0NTQzMTIsImlzcyI6Ikdsb2JhbGhhY2siLCJhdWQiOiJHbG9iYWxoYWNrIn0.rVstjBZEX7_3B5AUOfP4GRCLaWzL_kOCnPnmJyZ9Ez8"
+        "Authorization": "Bearer " + userInfo.token
       }
     })
       .then(function (data, status) {
@@ -63,21 +63,22 @@ angular.module('globalHack7App').service('DataService', ['$http', '$window', '$l
       data: JSON.stringify(userInfo),
       headers: {'Content-Type': 'application/json'}
     }).then(function (res) {
-        console.log(res);
-        var currentUser = {};
-        if(!_.isUndefined(res)){
-          if(!_.isUndefined(res.data) && res.data.active) {
-            currentUser = res.data;
-            currentUser.authenticated = true;
-            $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
-          } else {
-            $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
-          }
-          return $location.url("/dashboard");
+      console.log(res);
+      var currentUser = {};
+      if(!_.isUndefined(res)){
+        if(!_.isUndefined(res.data) && res.data.active) {
+          currentUser = res.data;
+          $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+          $rootScope.$broadcast('currentUserUpdated');
+        } else {
+          $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+          $rootScope.$broadcast('currentUserUpdated');
         }
+        return $location.url("/dashboard");
+      }
       }).catch(function (e) {
         console.log(e);
-        return $location.url("/signup");
+        return $location.url("/login");
       });
   };
 }]);
