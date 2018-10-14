@@ -29,9 +29,9 @@ angular
     // Router config
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl',
+        controllerAs: 'dashboard'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -52,7 +52,12 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl',
         controllerAs: 'contact'
-      });
+      })
+      .when('/resources', {
+      templateUrl: 'views/resources.html',
+      controller: 'ResourcesCtrl',
+      controllerAs: 'resources'
+    });
 
     // Locations config
     $locationProvider.hashPrefix('');

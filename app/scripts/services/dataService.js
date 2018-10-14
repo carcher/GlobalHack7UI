@@ -7,7 +7,7 @@
  * # DataService
  * Controller of the globalHack7App
  */
-angular.module('globalHack7App').service('DataService', ['$http', '$window', '$location', '$rootScope', function ($http, $window, $location, $rootScope) {
+angular.module('globalHack7App').service('DataService', ['$http', '$window', '$location', '$rootScope', '$q', function ($http, $window, $location, $rootScope, $q) {
   var getData = function(userInfo) {
     $http({
       method: 'GET',
@@ -25,6 +25,41 @@ angular.module('globalHack7App').service('DataService', ['$http', '$window', '$l
       .catch(function (e) {
         console.log(e);
       });
+  };
+
+  // Get resources data
+  this.getResources = function() {
+    var deferred = $q.defer();
+    $http({
+      method: 'GET',
+      url: 'http://67.205.159.40/Resources/',
+    })
+      .then(function (res, status) {
+        console.log(res.data);
+        deferred.resolve(res.data);
+      })
+      .catch(function (e) {
+        console.log(e);
+      });
+    return deferred.promise;
+  };
+
+  // Get organizations data
+  this.getOrganizations = function() {
+    var deferred = $q.defer();
+    $http({
+      method: 'GET',
+      url: 'http://67.205.159.40/Organizations/',
+    })
+      .then(function (res, status) {
+        console.log(res.data);
+        console.log("From service", res.data);
+        deferred.resolve(res.data);
+      })
+      .catch(function (e) {
+        console.log(e);
+      });
+    return deferred.promise;
   };
 
   // This is the post request for registration

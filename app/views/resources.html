@@ -1,0 +1,33 @@
+<!-- Search form -->
+<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+<div>&nbsp;</div>
+
+<div class="container">
+  <div class="row col-md-12">
+    <div class="col-md-4">
+      Name
+    </div>
+    <div class="col-md-4">
+      Description
+    </div>
+    <div class="col-md-4">
+      Organization
+    </div>
+  </div>
+  <div ng-repeat="org in organizations" class=row">
+    <div class="col-sm">
+      {{org.name}}
+    </div>
+    <div class="col-sm">
+      {{org.description}}
+    </div>
+    <div class="col-sm">
+      {{org.description}}
+    </div>
+  </div>
+</div>
+
+<div>&nbsp;</div>
+
+
