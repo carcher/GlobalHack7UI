@@ -7,7 +7,7 @@
  * # DataService
  * Controller of the globalHack7App
  */
-angular.module('globalHack7App').service('DataService', ['$http', '$window', '$location', function ($http, $window, $location) {
+angular.module('globalHack7App').service('DataService', ['$http', '$window', '$location', '$rootScope', function ($http, $window, $location, $rootScope) {
   this.getData = function() {
     $http({
       method: 'GET',
@@ -41,10 +41,11 @@ angular.module('globalHack7App').service('DataService', ['$http', '$window', '$l
         if(!_.isUndefined(res)){
           if(!_.isUndefined(res.data) && res.data.active) {
             currentUser = res.data;
-            currentUser.authenticated = true;
             $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+            $rootScope.$broadcast('currentUserUpdated');
           } else {
             $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+            $rootScope.$broadcast('currentUserUpdated');
           }
           return $location.url("/dashboard");
         }

@@ -45,8 +45,8 @@
               <li class="pull-right"><a ng-href="#/dashboard">Dashboard</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
-              <li ng-if="!currentUser.authenticated" class="pull-right"><a ng-href="#/login">Login</a></li>
-              <li ng-if="currentUser.authenticated" class="pull-right">{{'Welcome ' + currentUser.firstName | translate}}</li>
+              <li ng-if="!currentUser.active" class="pull-right"><a ng-href="#/login">Login</a></li>
+              <li ng-if="currentUser.active" class="pull-right">{{'Welcome ' + currentUser.firstName | translate}}</li>
             </ul>
           </div>
         </div>
@@ -99,13 +99,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/signup.js"></script>
-        <script src="scripts/controllers/dashboard.js"></script>
-        <script src="scripts/services/dataService.js"></script>
-        <!-- endbuild -->
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="scripts/app.js"></script>
+      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/controllers/login.js"></script>
+      <script src="scripts/controllers/signup.js"></script>
+      <script src="scripts/controllers/dashboard.js"></script>
+      <script src="scripts/services/dataService.js"></script>
+      <!-- endbuild -->
 </body>
 </html>

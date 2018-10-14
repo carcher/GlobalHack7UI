@@ -11,7 +11,7 @@ angular.module('globalHack7App')
   .controller('MainCtrl',['$scope', 'DataService', '$translate', '$rootScope', '$window', function ($scope, dataservice, $translate, $rootScope, $window) {
     $scope.currentUser = {};
     $scope.selectedLanguage = 'en';
-    $scope.currentUser.authenticated = false;
+    $scope.currentUser.active = false;
     $window.localStorage.setItem("currentUser", angular.toJson($scope.currentUser));
 
     $scope.languages = [
@@ -33,6 +33,14 @@ angular.module('globalHack7App')
       if(!_.isUndefined(nv)) {
         $scope.changeLanguage(nv);
         console.log(nv);
+      }
+    });
+
+    $rootScope.$on('currentUserUpdated', function() {
+      var currentUser = JSON.parse($window.localStorage.getItem("currentUser"));
+      console.log(currentUser);
+      if(!_.isUndefined(currentUser)) {
+        $scope.currentUser = currentUser;
       }
     });
 }]);

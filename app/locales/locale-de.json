@@ -7,5 +7,7 @@
   "PASSED_AS_INTERPOLATION": "Anfänger! Ich bin interpoliert!",
   "VARIABLE_REPLACEMENT": "Hi {{name}}",
   "BUTTON_LANG_DE": "deutsch",
-  "BUTTON_LANG_EN": "englisch"
+  "BUTTON_LANG_EN": "englisch",
+  "Welcome": "Willkommen",
+  "Powered By": "Powered by",
 }

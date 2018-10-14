@@ -1,4 +1,4 @@
-// locale-en.json
+// locale-es.json
 {
   "HEADLINE": "What an awesome module!",
   "PARAGRAPH": "Srsly!",
@@ -7,5 +7,7 @@
   "PASSED_AS_INTERPOLATION": "Beginners! I'm interpolated!",
   "VARIABLE_REPLACEMENT": "Hi {{name}}",
   "BUTTON_LANG_DE": "German",
-  "BUTTON_LANG_EN": "English"
+  "BUTTON_LANG_EN": "English",
+  "Welcome": "Bienvenido",
+  "Powered By": "Funciona con",
 }
