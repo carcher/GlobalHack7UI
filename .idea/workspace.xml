@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fee7a02-b112-47ec-8aca-68bfd6b5f006" name="Default Changelist" comment="Merge branch 'master' of https://github.com/carcher/GlobalHack7UI&#10;&#10;# Conflicts:&#10;#&#9;app/scripts/services/dataService.js&#10;#&#9;package-lock.json&#10;#&#9;package.json">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/locale-de.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/locale-de.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/locale-en.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/locale-en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/locales/locale-es.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/locales/locale-es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/scripts/services/dataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/scripts/services/dataService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -48,7 +41,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="86" />
-          <entry key="html" value="707" />
+          <entry key="html" value="728" />
           <entry key="js" value="1707" />
           <entry key="json" value="41" />
         </counts>
@@ -56,7 +49,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="86" />
-          <entry key="HTML" value="707" />
+          <entry key="HTML" value="728" />
           <entry key="JSON" value="41" />
           <entry key="JavaScript" value="1707" />
         </counts>
@@ -92,11 +85,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="374">
+              <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+              <folding>
+                <element signature="e#3085#3091#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="78" lean-forward="true" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+            <state relative-caret-position="238">
+              <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -172,10 +168,10 @@
         <option value="$PROJECT_DIR$/app/scripts/services/dataService.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/views/dashboard.html" />
         <option value="$PROJECT_DIR$/app/locales/locale-es.json" />
         <option value="$PROJECT_DIR$/app/locales/locale-en.json" />
         <option value="$PROJECT_DIR$/app/locales/locale-de.json" />
+        <option value="$PROJECT_DIR$/app/views/dashboard.html" />
       </list>
     </option>
   </component>
@@ -382,12 +378,12 @@
       <updated>1539442047675</updated>
       <workItem from="1539442050041" duration="18815000" />
       <workItem from="1539475888376" duration="2259000" />
-      <workItem from="1539496728531" duration="11625000" />
+      <workItem from="1539496728531" duration="12330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32699000" />
+    <option name="totallyTimeSpent" value="33404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,13 +398,13 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9020979" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9020979" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Grunt " order="2" sideWeight="0.0979021" side_tool="true" weight="0.24983476" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49966952" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4976867" visible="true" weight="0.18865249" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.4976867" visible="true" weight="0.18865249" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50231326" side_tool="true" weight="0.18865249" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
@@ -539,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/locales/locale-de.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -569,8 +558,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="78" lean-forward="true" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+        <state relative-caret-position="238">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+          <folding>
+            <element signature="e#3085#3091#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
