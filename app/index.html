@@ -46,7 +46,7 @@
             </ul>
             <ul class="nav navbar-nav pull-right">
               <li ng-if="!currentUser.authenticated" class="pull-right"><a ng-href="#/login">Login</a></li>
-              <li ng-if="currentUser.authenticated" class="pull-right">{{'Welcome ' + currentUser.FirstName | translate}}</li>
+              <li ng-if="currentUser.authenticated" class="pull-right">{{'Welcome ' + currentUser.firstName | translate}}</li>
             </ul>
           </div>
         </div>
@@ -57,7 +57,6 @@
       <div class="changeLang">
         <span>Change language</span>
         <select ng-model="selectedLanguage">
-          <option value="">Select Language</option>
           <option ng-repeat="language in languages" value="{{language.abbr}}">{{language.name}}</option>
         </select>
       </div>
@@ -66,7 +65,7 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><i>Powered By</i> Code Remedy</p>
       </div>
     </div>
 
