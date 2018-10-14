@@ -10,12 +10,12 @@
 angular.module('globalHack7App')
   .controller('LoginCtrl',['$scope', 'DataService', function ($scope, dataservice) {
     $scope.userInfo = {
-      userName: "",
+      username: "",
       password: ""
     };
 
     // Attempt to authenticate the user, pass back to login if failed
-    $scope.logon = function(userInfo){
-      dataservice.registerUser(userInfo);
+    $scope.logon = function(){
+      dataservice.loginUser($scope.userInfo);
     };
 }]);

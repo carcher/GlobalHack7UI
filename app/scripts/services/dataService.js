@@ -54,4 +54,30 @@ angular.module('globalHack7App').service('DataService', ['$http', '$window', '$l
         return $location.url("/signup");
       });
   };
+
+  this.loginUser = function(userInfo) {
+    console.log(userInfo);
+    $http({
+      method: 'POST',
+      url: 'http://67.205.159.40/Sessions/',
+      data: JSON.stringify(userInfo),
+      headers: {'Content-Type': 'application/json'}
+    }).then(function (res) {
+        console.log(res);
+        var currentUser = {};
+        if(!_.isUndefined(res)){
+          if(!_.isUndefined(res.data) && res.data.active) {
+            currentUser = res.data;
+            currentUser.authenticated = true;
+            $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+          } else {
+            $window.localStorage.setItem("currentUser", angular.toJson(currentUser));
+          }
+          return $location.url("/dashboard");
+        }
+      }).catch(function (e) {
+        console.log(e);
+        return $location.url("/signup");
+      });
+  };
 }]);
